@@ -15,13 +15,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             if (transform.localRotation.y == 0)
                 transform.Rotate(0, 180, 0);
             transform.Translate(Vector3.back * movementspeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow)  || Input.GetKey(KeyCode.D))
         {
             if (transform.localRotation.y <= 1)
                 transform.Rotate(0, 0, 0);
@@ -37,6 +37,7 @@ public class Movement : MonoBehaviour
     {
         if(other.gameObject.layer == 3)
         {
+            CoinMgmt.coins++;
             Destroy(other.gameObject);
         }
     }
