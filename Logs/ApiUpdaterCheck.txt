@@ -86,6 +86,9 @@ moved types parse time: 33ms
 candidates parse time : 0ms
 C# parse time         : 173ms
 candidates check time : 21ms
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 console write time    : 0ms
 
