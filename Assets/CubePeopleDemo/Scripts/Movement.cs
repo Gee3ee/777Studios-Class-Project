@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
         float yRotation = transform.eulerAngles.y;
 
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) && yRotation == 0)
             {
@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
             transform.Translate(Vector3.left * movementspeed * Time.deltaTime, Space.World);
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             if (Input.GetKeyDown(KeyCode.RightArrow) && yRotation != 0)
             {
@@ -62,6 +62,7 @@ public class Movement : MonoBehaviour
     {
         if (other.gameObject.layer == 3 || other.gameObject.layer == 7)
         {
+            CoinMgmt.coins++;
             Destroy(other.gameObject);
         }
     }
