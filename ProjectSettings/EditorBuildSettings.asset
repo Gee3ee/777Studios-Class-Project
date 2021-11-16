@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/NewWorldDwellers.unity
+    guid: 2f251cbf24218014895b2b49115819b8
+  - enabled: 1
+    path: Assets/StartMenu.unity
+    guid: 955624b09835af9448742a32feb0a404
   m_configObjects: {}

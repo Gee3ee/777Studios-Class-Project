@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody rb;
 
+    public AudioClip audioClip;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -30,11 +32,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.layer == 3 || other.gameObject.layer == 7)
         {
+            AudioSource.PlayClipAtPoint(audioClip, transform.position);
             Destroy(other.gameObject);
         }
     }
-
-
 
     // Update is called once per frame
     void Update()
