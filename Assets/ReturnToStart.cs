@@ -18,5 +18,7 @@ public class ReturnToStart : MonoBehaviour
     {
         if (rb.position.y < -25)
             SceneManager.LoadScene(1);
+        if (rb.position.x > 365)
+            SceneManager.LoadScene(2);
     }
 }

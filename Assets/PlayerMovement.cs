@@ -30,9 +30,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 3 || other.gameObject.layer == 7)
+        if (other.gameObject.layer == 3)
         {
             AudioSource.PlayClipAtPoint(audioClip, transform.position);
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.layer == 8 || other.gameObject.layer == 7)
+        {
             Destroy(other.gameObject);
         }
     }
